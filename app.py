@@ -37,50 +37,6 @@ def save_audio(audio_type, audio_data, sr, tmp_dir):
         raise
 
 
-# Voice cloning function
-def clone_voice(reference_audio, reference_text, target_text, args):
-    """Clone voice from reference audio and text"""
-    if not reference_audio or not reference_text or not target_text:
-        error_msg = "Error: Please provide reference audio, reference text, and target text"
-        logger.error(error_msg)
-        return error_msg
-
-    try:
-        output_audio, sr = common_tts_engine.clone(
-            reference_audio, reference_text, target_text
-        )
-        audio_type = "clone"
-        clone_path = save_audio(audio_type, output_audio, sr, args.tmp_dir)
-        logger.info(f"Voice cloning completed successfully: {clone_path}")
-        return clone_path
-    except Exception as e:
-        error_msg = f"Clone failed: {str(e)}"
-        logger.error(error_msg)
-        return error_msg
-
-
-# Audio editing function
-def edit_audio(input_audio, source_text, edit_type, edit_info, target_text, args):
-    """Edit audio based on specified parameters"""
-    if not input_audio or not source_text:
-        error_msg = "Error: Please provide input audio and source text"
-        logger.error(error_msg)
-        return error_msg
-
-    try:
-        output_audio, sr = common_tts_engine.edit(
-            input_audio, source_text, edit_type, edit_info, target_text
-        )
-        audio_type = "edit"
-        edit_path = save_audio(audio_type, output_audio, sr, args.tmp_dir)
-        logger.info(f"Audio editing completed successfully: {edit_path}")
-        return edit_path
-    except Exception as e:
-        error_msg = f"Edit failed: {str(e)}"
-        logger.error(error_msg)
-        return error_msg
-
-
 class EditxTab:
     """Audio editing and voice cloning interface tab"""
 
@@ -302,7 +258,7 @@ class EditxTab:
                 """)
             gr.Markdown("""
                 **Para-linguistic Description:**
-                - Supported tags include: [Breathing] [Laughter] [Cough] [Sigh] [Confirmation-en] [Question-en] [Question-ah] [Question-oh] [Surprise-ah] [Surprise-oh] [Dissatisfaction-hnn] [Uhm] [Shh] [Crying] [Surprise-wa] [Surprise-yo] [Question-ei] [Question-yi]
+                - Supported tags include: [Breathing] [Laughter] [Surprise-oh] [Confirmation-en] [Uhm] [Surprise-ah] [Surprise-wa] [Sigh] [Question-ei] [Dissatisfaction-hnn]
                 - Example:
                     - Fill in "clone text" field: "Great, the weather is so nice today." Click the "CLONE" button to get audio.
                     - Change "clone text" field to: "Great[Laughter], the weather is so nice today[Surprise-ah]." Click the "EDIT" button to get para-linguistic audio.

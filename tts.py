@@ -277,23 +277,25 @@ class StepAudioTTS:
         """
 
         audio_text = audio_text.strip() if audio_text else ""
-
-        if edit_type in {"emotion", "style", "speed"}:
-            if edit_info in {"exaggerated", "ethereal", "whisper", "act_coy", "older"}:
+        if edit_type in {"emotion", "speed"}:
+            if edit_info == "remove":
+                instruct_prefix = f"Remove any emotion in the following audio and the reference text is: {audio_text}\n"
+            else:
+                instruct_prefix=f"Make the following audio more {edit_info}. The text corresponding to the audio is: {audio_text}\n"
+        elif edit_type == "style":
+            if edit_info == "remove":
+                instruct_prefix = f"Remove any speaking styles in the following audio and the reference text is: {audio_text}\n"
+            elif edit_info in {"exaggerated","ethereal","whisper","act_coy","older"}:
                 instruct_prefix = f"Make the following audio more {edit_info} style. The text corresponding to the audio is: {audio_text}\n"
             else:
-                instruct_prefix = f"Make the following audio more {edit_info}. The text corresponding to the audio is: {audio_text}\n"
-        elif edit_type == "music":
-            instruct_prefix = f"Separate the vocals from the following audio. The lyric is: {audio_text}"
+                instruct_prefix=f"Make the following audio more {edit_info}. The text corresponding to the audio is: {audio_text}\n"
         elif edit_type == "denoise":
             instruct_prefix = f"Remove any noise from the given audio while preserving the voice content clearly. Ensure that the speech quality remains intact with minimal distortion, and eliminate all noise from the audio."
         elif edit_type == "vad":
             instruct_prefix = f"Remove any silent portions from the given audio while preserving the voice content clearly. Ensure that the speech quality remains intact with minimal distortion, and eliminate all silence from the audio."
         elif edit_type == "bgm":
             instruct_prefix = f"Remove any background music (BGM) from the given audio while preserving the voice content clearly. Ensure that the speech quality remains intact with minimal distortion, and eliminate all BGM from the audio."
-        elif edit_type == "animal":
-            instruct_prefix = f"Make the following audio more like mimic animal calls. The text corresponding to the audio is: {audio_text}\n"
-        elif edit_type == "para-linguistic":
+        elif edit_type == "paralinguistic":
             instruct_prefix = f"Add some non-verbal sounds to make the audio more natural, the new text is : {text}\n  The text corresponding to the audio is: {audio_text}\n"
         else:
             raise HTTPException(
