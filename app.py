@@ -134,10 +134,6 @@ class EditxTab:
         self.logger.info("Starting audio editing process")
 
         # Input validation
-        if not prompt_text_input or prompt_text_input.strip() == "":
-            error_msg = "[Error] Uploaded text cannot be empty."
-            self.logger.error(error_msg)
-            return [{"role": "user", "content": error_msg}], state
         if not prompt_audio_input:
             error_msg = "[Error] Uploaded audio cannot be empty."
             self.logger.error(error_msg)
@@ -293,9 +289,9 @@ class EditxTab:
 
 def launch_demo(args, editx_tab):
     """Launch the gradio demo"""
-    with gr.Blocks(title="🎙️ Step-Audio-EditX") as demo:
+    with gr.Blocks(theme=gr.themes.Soft(), title="🎙️ Step-Audio-EditX") as demo:
         gr.Markdown("## 🎙️ Step-Audio-EditX")
-        gr.Markdown("Audio editing and voice cloning using Step-Audio-EditX model.")
+        gr.Markdown("Audio Editing and Zero-Shot Cloning using Step-Audio_EditX")
 
         # Register components
         editx_tab.register_components()
