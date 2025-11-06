@@ -123,8 +123,8 @@ class StepAudioTTS:
         """
         try:
             logger.debug(f"Starting voice cloning: {prompt_wav_path}")
-            prompt_wav, sample_rate = torchaudio.load(prompt_wav_path)
-            vq0206_codes, vq02_codes_ori, vq06_codes_ori, speech_feat, speech_feat_len, speech_embedding = (
+            prompt_wav, _ = torchaudio.load(prompt_wav_path)
+            vq0206_codes, vq02_codes_ori, vq06_codes_ori, speech_feat, _, speech_embedding = (
                 self.preprocess_prompt_wav(prompt_wav_path)
             )
             prompt_speaker = self.generate_clone_voice_id(prompt_text, prompt_wav)
@@ -135,7 +135,6 @@ class StepAudioTTS:
                 target_text,
                 prompt_text,
                 prompt_speaker,
-                vq0206_codes,
                 prompt_wav_tokens,
             )
 
@@ -297,7 +296,7 @@ class StepAudioTTS:
         return history
     
     def _encode_audio_edit_clone_prompt(
-        self, text: str, prompt_text: str, prompt_speaker: str, prompt_code: list, prompt_wav_tokens: str
+        self, text: str, prompt_text: str, prompt_speaker: str, prompt_wav_tokens: str
     ):
         prompt = self.edit_clone_sys_prompt_tpl.format(
             speaker=prompt_speaker,
