@@ -36,10 +36,11 @@ We are open-sourcing Step-Audio-EditX, a powerful LLM-based audio model speciali
     
 - **Emotion and Speaking Style Editing**
   - Remarkably effective iterative control over emotions and styles, supporting **dozens** of options for editing.
-    - Emotion Control : [ *Angry*, *Happy*, *Sad*, *Excited*, *Fearful*, *Surprised*, *Disgusted*, etc. ]
-    - Speaking Style Control: [ *Act_coy*, *Older*, *Child*, *Whisper*, *Serious*, *Generous*, *Exaggerated*, etc.]
-    - More emotional and speaking style controls are on the way. **Get Ready!** 🚀 
+    - Emotion Editing : [ *Angry*, *Happy*, *Sad*, *Excited*, *Fearful*, *Surprised*, *Disgusted*, etc. ]
+    - Speaking Style Editing: [ *Act_coy*, *Older*, *Child*, *Whisper*, *Serious*, *Generous*, *Exaggerated*, etc.]
+    - Editing with more emotion and more speaking styles is on the way. **Get Ready!** 🚀 
     
+
 - **Paralinguistic Editing**:
   -  Precise control over 10 types of paralinguistic features for more natural, human-like, and expressive synthetic audio.
   - Supporting Tags:
