@@ -47,28 +47,6 @@ We are open-sourcing Step-Audio-EditX, a powerful LLM-based audio model speciali
   - Supporting Tags:
     - [ *Breathing*, *Laughter*, *Suprise-oh*, *Confirmation-en*, *Uhm*, *Suprise-ah*, *Suprise-wa*, *Sigh*, *Question-ei*, *Dissatisfaction-hnn* ]
 
-all feaures is as follows:
-```json
-{
-  "emotion": [
-      'happy', 'angry', 'sad', 'humour', 'confusion', 'disgusted',
-      'empathy', 'embarrass', 'fear', 'surprised', 'excited',
-      'depressed', 'coldness', 'admiration', 'remove'
-  ],
-  "style": [
-      'serious', 'arrogant', 'child', 'older', 'girl', 'pure',
-      'sister', 'sweet', 'ethereal', 'whisper', 'gentle', 'recite',
-      'generous', 'act_coy', 'warm', 'shy', 'comfort', 'authority',
-      'chat', 'radio', 'soulful', 'story', 'vivid', 'program',
-      'news', 'advertising', 'roar', 'murmur', 'shout', 'deeply', 'loudly',
-      'remove', 'exaggerated'
-  ],
-  "vad": [], # no sub type
-  "denoise": [], # no sub type
-  "paralinguistic": ['Breathing', 'Laughter', 'Suprise-oh', 'Confirmation-en', 'Uhm', 'Suprise-ah', 'Suprise-wa', 'Sigh', 'Question-ei', 'Dissatisfaction-hnn'],
-  "speed": ['faster', 'slower', 'more faster', 'more slower'],
-}
-```
 For more examples, see [demo page](https://stepaudiollm.github.io/step-audio-editx/).
 
 ## Model Download
