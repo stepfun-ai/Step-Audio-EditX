@@ -23,7 +23,7 @@ We are open-sourcing Step-Audio-EditX, a powerful LLM-based audio model speciali
 - [ ] Step-Audio-Edit-Benchmark
 - [x] Model Checkpoints
   - [x] Step-Audio-Tokenizer
-  - [ ] Step-Audio-EditX
+  - [x] Step-Audio-EditX
   - [ ] Step-Audio-EditX-Int8
 - [ ] Training Code
   - [ ] SFT training
@@ -59,7 +59,7 @@ For more examples, see [demo page](https://stepaudiollm.github.io/step-audio-edi
 
 ## Model Usage
 ### 📜 Requirements
-The following table shows the requirements for running Step-Audio model (batch size = 1):
+The following table shows the requirements for running Step-Audio-EditX model (batch size = 1):
 
 |     Model    |  Setting<br/>(sample frequency) | GPU Minimum Memory  |
 |------------|--------------------------------|----------------|
@@ -79,7 +79,7 @@ git clone https://github.com/stepfun-ai/Step-Audio-EditX.git
 conda create -n stepaudioedit python=3.10
 conda activate stepaudioedit
 
-cd Step-Audio
+cd Step-Audio-EditX
 pip install -r requirements.txt
 
 git lfs install
@@ -97,7 +97,7 @@ where_you_download_dir
 
 #### Run with Docker
 
-You can set up the environment required for running Step-Audio using the provided Dockerfile.
+You can set up the environment required for running Step-Audio-EditX using the provided Dockerfile.
 
 ```bash
 # build docker
