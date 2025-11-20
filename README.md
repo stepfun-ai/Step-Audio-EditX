@@ -366,7 +366,7 @@ The following table shows the requirements for running Step-Audio-EditX model (b
 - Python >= 3.10.0 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html))
 - [PyTorch >= 2.4.1-cu121](https://pytorch.org/)
 - [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
-
+- Sox
 ```bash
 git clone https://github.com/stepfun-ai/Step-Audio-EditX.git
 conda create -n stepaudioedit python=3.10
