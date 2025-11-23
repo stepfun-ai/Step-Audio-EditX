@@ -11,7 +11,8 @@
   <a href="https://huggingface.co/spaces/stepfun-ai/Step-Audio-EditX"><img src="https://img.shields.io/static/v1?label=Space%20Playground&message=HuggingFace&color=yellow"></a> &ensp;
 </div>
 
-## 🔥🔥🔥 News!!
+## 🔥🔥🔥 News!!！
+* Nov 23, 2025: 📊 [Step-Audio-Edit-Benchmark](https://github.com/stepfun-ai/Step-Audio-Edit-Benchmark) Released!
 * Nov 19, 2025: ⚙️ We release a **new version** of our model, which **supports polyphonic pronunciation control** and improves the performance of emotion, speaking style, and paralinguistic editing.
 * Nov 12, 2025: 📦 We release the **optimized inference code** and **model weights** of **Step-Audio-EditX** ([HuggingFace](https://huggingface.co/stepfun-ai/Step-Audio-EditX);  [ModelScope](https://modelscope.cn/models/stepfun-ai/Step-Audio-EditX)) and **Step-Audio-Tokenizer**([HuggingFace](https://huggingface.co/stepfun-ai/Step-Audio-Tokenizer);  [ModelScope](https://modelscope.cn/models/stepfun-ai/Step-Audio-Tokenizer))
 * Nov 07, 2025: ✨ [Demo Page](https://stepaudiollm.github.io/step-audio-editx/) ; 🎮  [HF Space Playground](https://huggingface.co/spaces/stepfun-ai/Step-Audio-EditX)
@@ -23,7 +24,7 @@ We are open-sourcing Step-Audio-EditX, a powerful **3B-parameter** LLM-based **R
 ## 📑 Open-source Plan
 - [x] Inference Code
 - [x] Online demo (Gradio)
-- [ ] Step-Audio-Edit-Benchmark
+- [x] Step-Audio-Edit-Benchmark
 - [x] Model Checkpoints
   - [x] Step-Audio-Tokenizer
   - [x] Step-Audio-EditX
