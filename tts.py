@@ -85,6 +85,7 @@ class StepAudioTTS:
         logger.info(f"   - model_source: {model_source}")
         logger.info(f"   - model_path: {model_path}")
         logger.info(f"   - tts_model_id: {tts_model_id}")
+        logger.info(f"   - quantization_config: {quantization_config}")
 
         self.audio_tokenizer = audio_tokenizer
 

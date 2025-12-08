@@ -264,6 +264,20 @@ class UnifiedModelLoader:
             else:
                 raise ValueError(f"Unsupported model source: {source}")
 
+            # Check for AWQ-specific modules (including CompressedLinear)
+            awq_modules = sum(1 for n, m in model.named_modules() 
+                            if 'WQLinear' in type(m).__name__ or 'QuantLinear' in type(m).__name__)
+            compressed_modules = sum(1 for n, m in model.named_modules() 
+                            if 'CompressedLinear' in type(m).__name__ or 'Compressed' in type(m).__name__)
+            total_quantized = awq_modules + compressed_modules
+            
+            if total_quantized > 0:
+                self.logger.info(f"   ✓ Found {total_quantized} quantized layers (AWQ: {awq_modules}, Compressed: {compressed_modules})")
+            else:
+                regular_linear = sum(1 for n, m in model.named_modules() 
+                                   if isinstance(m, torch.nn.Linear))
+                self.logger.info(f"   ⚠️ No quantized layers found, {regular_linear} regular Linear layers")
+            
             self.logger.info(f"Successfully loaded model from {source}")
             return model, tokenizer, model_path
 
