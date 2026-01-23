@@ -210,37 +210,89 @@ We are open-sourcing Step-Audio-EditX, a powerful **3B-parameter** LLM-based **R
   </tr>
   <tr>
   </tr>
-  <tr>
-    <td rowspan="5" style="vertical-align: middle; text-align:center;" align="center">paralinguistic</td>
-    <td align="center"><b>Breathing</b></td>
-    <td align="center">Breathing sound</td>
-    <td align="center"><b>Laughter</b></td>
-    <td align="center">Laughter or laughing sound</td>
-  </tr>
-  <tr>
-    <td align="center"><b>Uhm</b></td>
-    <td align="center">Hesitation sound: "Uhm"</td>
-    <td align="center"><b>Sigh</b></td>
-    <td align="center">Sighing sound</td>
-  </tr>
-  <tr>
-    <td align="center"><b>Surprise-oh</b></td>
-    <td align="center">Expressing surprise: "Oh"</td>
-    <td align="center"><b>Surprise-ah</b></td>
-    <td align="center">Expressing surprise: "Ah"</td>
-  </tr>
-  <tr>
-    <td align="center"><b>Surprise-wa</b></td>
-    <td align="center">Expressing surprise: "Wa"</td>
-    <td align="center"><b>Confirmation-en</b></td>
-    <td align="center">Confirming: "En"</td>
-  </tr>
-  <tr>
-    <td align="center"><b>Question-ei</b></td>
-    <td align="center">Questioning: "Ei"</td>
-    <td align="center"><b>Dissatisfaction-hnn</b></td>
-    <td align="center">Dissatisfied sound: "Hnn"</td>
-  </tr>
+<tr>
+  <td rowspan="11" style="vertical-align: middle; text-align:center;" align="center">paralinguistic</td>
+  
+  <td align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[sigh]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+  
+  <td align="center">Sighing sound</td>
+  
+  <td align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[inhale]&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+  
+  <td align="center">Inhaling sound</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[laugh]</b></td>
+  <td align="center">Laughter sound</td>
+  <td align="center"><b>[chuckle]</b></td>
+  <td align="center">Chuckling sound</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[exhale]</b></td>
+  <td align="center">Exhaling sound</td>
+  <td align="center"><b>[clears throat]</b></td>
+  <td align="center">Throat clearing sound</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[snort]</b></td>
+  <td align="center">Snorting sound</td>
+  <td align="center"><b>[giggle]</b></td>
+  <td align="center">Giggling sound</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[cough]</b></td>
+  <td align="center">Coughing sound</td>
+  <td align="center"><b>[breath]</b></td>
+  <td align="center">Breathing sound</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[uhm]</b></td>
+  <td align="center">Hesitation sound: "Uhm"</td>
+  <td align="center"><b>[Confirmation-en]</b></td>
+  <td align="center">Confirming: "En"</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[Surprise-oh]</b></td>
+  <td align="center">Expressing surprise: "Oh"</td>
+  <td align="center"><b>[Surprise-ah]</b></td>
+  <td align="center">Expressing surprise: "Ah"</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[Surprise-wa]</b></td>
+  <td align="center">Expressing surprise: "Wa"</td>
+  <td align="center"><b>[Surprise-yo]</b></td>
+  <td align="center">Expressing surprise: "Yo"</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[Dissatisfaction-hnn]</b></td>
+  <td align="center">Dissatisfied sound: "Hnn"</td>
+  <td align="center"><b>[Question-ei]</b></td>
+  <td align="center">Questioning: "Ei"</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[Question-ah]</b></td>
+  <td align="center">Questioning: "Ah"</td>
+  <td align="center"><b>[Question-en]</b></td>
+  <td align="center">Questioning: "En"</td>
+</tr>
+
+<tr>
+  <td align="center"><b>[Question-yi]</b></td>
+  <td align="center">Questioning: "Yi"</td>
+  <td align="center"><b>[Question-oh]</b></td>
+  <td align="center">Questioning: "Oh"</td>
+</tr>
+
+
 </table>
  
 ## Feature Requests & Wishlist
