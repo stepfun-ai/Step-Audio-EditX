@@ -212,9 +212,13 @@ We are open-sourcing Step-Audio-EditX, a powerful **3B-parameter** LLM-based **R
   </tr>
 <tr>
   <td rowspan="11" style="vertical-align: middle; text-align:center;" align="center">paralinguistic</td>
-  <td align="center"><b>[sigh]</b></td>
+  
+  <td align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[sigh]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+  
   <td align="center">Sighing sound</td>
-  <td align="center"><b>[inhale]</b></td>
+  
+  <td align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[inhale]&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+  
   <td align="center">Inhaling sound</td>
 </tr>
 
