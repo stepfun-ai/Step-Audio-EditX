@@ -930,7 +930,7 @@ class UniASR(torch.nn.Module):
         # 1. Build ASR model
         scorers = {}
 
-        if self.ctc != None:
+        if self.ctc is not None:
             ctc = CTCPrefixScorer(ctc=self.ctc, eos=self.eos)
             scorers.update(ctc=ctc)
         token_list = kwargs.get("token_list")

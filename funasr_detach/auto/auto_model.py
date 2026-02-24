@@ -22,7 +22,7 @@ from funasr_detach.models.campplus.utils import sv_chunk, postprocess, distribut
 
 try:
     from funasr_detach.models.campplus.cluster_backend import ClusterBackend
-except:
+except ImportError:
     print("If you want to use the speaker diarization, please `pip install hdbscan`")
 
 
