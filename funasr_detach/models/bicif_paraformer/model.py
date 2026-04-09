@@ -247,7 +247,7 @@ class BiCifParaformer(Paraformer):
 
         # init beamsearch
         is_use_ctc = (
-            kwargs.get("decoding_ctc_weight", 0.0) > 0.00001 and self.ctc != None
+            kwargs.get("decoding_ctc_weight", 0.0) > 0.00001 and self.ctc is not None
         )
         is_use_lm = (
             kwargs.get("lm_weight", 0.0) > 0.00001

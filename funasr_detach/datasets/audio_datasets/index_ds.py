@@ -43,7 +43,7 @@ class IndexDSJsonlRankSplit(torch.utils.data.Dataset):
         try:
             rank = dist.get_rank()
             world_size = dist.get_world_size()
-        except:
+        except RuntimeError:
             rank = 0
             world_size = 1
             logging.warning("distributed is not initialized, only single shard")
@@ -65,7 +65,7 @@ class IndexDSJsonlRankSplit(torch.utils.data.Dataset):
     def __getitem__(self, index):
         try:
             data = self.contents[index]
-        except:
+        except (IndexError, KeyError):
             print(index)
         return data
 

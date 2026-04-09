@@ -491,7 +491,7 @@ class SCAMA(nn.Module):
         # 1. Build ASR model
         scorers = {}
 
-        if self.ctc != None:
+        if self.ctc is not None:
             ctc = CTCPrefixScorer(ctc=self.ctc, eos=self.eos)
             scorers.update(ctc=ctc)
         token_list = kwargs.get("token_list")
@@ -673,7 +673,7 @@ class SCAMA(nn.Module):
 
         # init beamsearch
         is_use_ctc = (
-            kwargs.get("decoding_ctc_weight", 0.0) > 0.00001 and self.ctc != None
+            kwargs.get("decoding_ctc_weight", 0.0) > 0.00001 and self.ctc is not None
         )
         is_use_lm = (
             kwargs.get("lm_weight", 0.0) > 0.00001
